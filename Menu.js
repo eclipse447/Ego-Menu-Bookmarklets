@@ -310,7 +310,7 @@ javascript: (function() {
         transform: rotate(90deg) scalex(1.4);
         font-size: 2vmax;
         cursor: pointer;
-        filter: drop-shadow(0px 0px 5px grey) drop-shadow(0px 0px 5px grey) drop-shadow(0px 0px 5px grey);
+        filter: drop-shadow(0px 0px 5px red) drop-shadow(0px 0px 5px red) drop-shadow(0px 0px 5px red);
         left: 2vmax;
         top: 1vmin;
         position: absolute;
@@ -321,15 +321,15 @@ javascript: (function() {
     }
     .EgoMenuIcon:hover {
       cursor: pointer;
-      filter: drop-shadow(0px 0px 3px grey);
+      filter: drop-shadow(0px 0px 3px red);
       transform: rotate(90deg) scalex(1);
       color: #c1c1c1;
   }
       .EgoMenuIcon:active {
         cursor: pointer;
-        filter: drop-shadow(0px 0px 3px #a6ff9e) drop-shadow(0px 0px 3px #a6ff9e);
+        filter: drop-shadow(0px 0px 3px #b90d0b) drop-shadow(0px 0px 3px #b90d0b);
         transform: rotate(90deg) scalex(0.8);
-        color: #5e5e5e;
+        color: #b90d0b;
     }
     .EgoMenuContent {
       position: fixed;
@@ -355,7 +355,7 @@ javascript: (function() {
       padding-top: 1vmin;
       padding-bottom: 1vmin;
       position: relative;
-      background-color: #21212182;
+      background-color: ##cd0e0c;
       font-size: 1vmax;
       border-radius: .5mm;
       margin: 0;
@@ -893,6 +893,7 @@ button.EgoXButton.EgoPopupDragButton {
       <button class="EgoMenuButton" id="fetchButton">EdPuzzle Hacks</button>
       <button class="EgoMenuButton" id="blooketHacksButton">Blooket Hacks</button>
       <button class="EgoMenuButton" id="egoKahootHacks">Kahoot Hacks</button>
+      <button class="EgoMenuButton" id="abButton">AB Cloaker</button>
 
       </div>
       </div>
@@ -1307,7 +1308,12 @@ button.EgoXButton.EgoPopupDragButton {
           .then(r => eval(r));
   });
  
-
+  var abButton = document.getElementById("abButton");
+  abButton.addEventListener("click", function() {
+      fetch("https://raw.githubusercontent.com/dragon731012/-WORKING-bookmarklets-and-games/main/school/about-blanker")
+          .then(r => r.text())
+          .then(r => eval(r));
+  });
 
 
   var abcScript = document.createElement('script');
